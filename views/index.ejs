@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit-comércio</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://kit.fontawesome.com/dc7239166f.js" crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" href="styles/header.css">
+</head>
+<body>
+    <%- include("components/header.ejs") %>
+    <div class="app-container">
+        <div class="app-container__currencies">
+            <div class="app-container__currencies__button" id="teste" >
+                <p>+</p>
+            </div>
+            <div class="app-container__currencies__list">
+                <% if(cryptoData) {%>
+                <div class="currency__card">
+                    <div class="currency__card__img"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png"></div>
+                    <div class="currency__card__data">
+                        <p><%-  parseFloat(cryptoData.data[0].priceUsd).toFixed(2) %> usd</p>
+                        <%if(cryptoData.data[0].changePercent24Hr < 0) {%>
+                        <p style="color:red"> <%- parseFloat(cryptoData.data[0].changePercent24Hr).toFixed(2) %> %</p>
+                        <%} else {%>
+                            <p style="color:green"> <%- parseFloat(cryptoData.data[0].changePercent24Hr).toFixed(2) %> %</p>
+                        <%}%>
+                    </div>
+                </div>
+                <%}%>
+                <% if(cryptoData) {%>
+                <div class="currency__card">
+                        <div class="currency__card__img"><img src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/512/Ethereum-ETH-icon.png"></div>
+                        <div class="currency__card__data">
+                            <p><%- parseFloat(cryptoData.data[1].priceUsd).toFixed(2) %> usd</p>
+                            <%if(cryptoData.data[1].changePercent24Hr < 0) {%>
+                            <p style="color:red"> <%- parseFloat(cryptoData.data[1].changePercent24Hr).toFixed(2) %> %</p>
+                            <%} else {%>
+                                <p style="color:green"> <%- parseFloat(cryptoData.data[1].changePercent24Hr).toFixed(2) %> %</p>
+                            <%}%>
+                        </div>
+                </div>
+                <%}%>
+                <% if(cryptoData) {%>
+                    <div class="currency__card">
+                            <div class="currency__card__img"><img src="https://cdn-icons-png.flaticon.com/512/825/825487.png"></div>
+                            <div class="currency__card__data">
+                                <p><%- parseFloat(cryptoData.data[22].priceUsd).toFixed(2) %> usd</p>
+                                <%if(cryptoData.data[22].changePercent24Hr < 0) {%>
+                                <p style="color:red"> <%- parseFloat(cryptoData.data[22].changePercent24Hr).toFixed(2) %> %</p>
+                                <%} else {%>
+                                    <p style="color:green"> <%- parseFloat(cryptoData.data[22].changePercent24Hr).toFixed(2) %> %</p>
+                                <%}%>
+                            </div>
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+        <div class="app-container__menu">
+            <ul class="app-container__menu__list">
+                <li class="app-container__menu__list__item"><i class="fa-solid fa-house fa-xl"></i></li>
+                <li class="app-container__menu__list__item"><i class="fa-solid fa-wallet fa-xl"></i></li>
+                <li class="app-container__menu__list__item"><i class="fa-solid fa-ranking-star fa-xl"></i></li>
+                <li class="app-container__menu__list__item"><i class="fa-solid fa-network-wired fa-xl"></i></li>
+                <li class="app-container__menu__list__item"><i class="fa-solid fa-gear fa-xl"></i></li>
+            </ul>
+        </div>
+        <div class="app-container__currency-performance">
+            <p class="card-title">Performance</p>
+            <div class="app-container__currency-performance__graph"></div>
+        </div>
+        <div class="app-container__currency-analysis">
+            <p class="card-title">Analise</p>
+        </div>
+        <div class="app-container__portfolio">
+            <p class="card-title">Porfolio</p>
+        </div>
+        <div class="app-container__projections">
+            <p class="card-title">Projeção</p>
+        </div>
+    </div>
+</body>
+<script src="../public/scripts/indexChart.js"type="text/javascript">
+
+</script>
+
+
+</html>
