@@ -6,6 +6,7 @@ header {
     padding-top: 2rem;
     margin-left: 2rem;
 }
+
 .header__display {
     flex: 30%;
 }
@@ -49,4 +50,76 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.menu-lateral {
+    display: none;
+    flex-direction: column;
+
+    position: absolute;
+    right: 2rem;
+    top: 4.7rem;
+    
+    width: 20rem;
+    height: 12rem;
+    
+    background-color: var(--darker-main-color);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+   animation: fadeIn 0.2s;
+}
+
+.menu-lateral__header {
+    display: flex;
+    flex: 25%;
+    flex-direction: row;
+    padding: 0rem 0px 0px 1rem;
+
+    align-items: center;
+}
+
+.menu-lateral__header__title {
+    flex: 60%;
+    font-size: xx-large;
+}
+
+.menu-lateral__header__side {
+    display: flex;
+    gap: 5px;
+    flex: 40%;
+    
+    font-size: larger;
+}
+
+#accountBalance,#accountBalance:focus {
+    background-color: #ffffff00;
+    border: none;
+    outline: none;
+    width: 70%;
+    font-size: larger;
+}
+.menu-lateral__links {
+    display: flex;
+    flex-direction: column;
+    flex: 75%;
+    row-gap: 1rem;
+}
+
+.menu-lateral__links > li {
+    padding: 2px 0px 2px 1rem;
+}
+
+.menu-lateral__links > li:hover,.menu-lateral__links > li:hover > a {
+    background-color: var(--selected);
+    color: white;
+}
+
+.menu-lateral__links > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% {opacity: 1;}
 }
