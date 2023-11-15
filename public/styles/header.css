@@ -23,6 +23,7 @@ header {
     display: flex;
     flex: 10%;
     align-items: center;
+    
 }
 
 .header__menu__list {
@@ -30,6 +31,7 @@ header {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    align-items: center;
     text-decoration: none;
 }
 
@@ -96,7 +98,7 @@ header {
     border: none;
     outline: none;
     width: 70%;
-    font-size: larger;
+    font-size: large;
 }
 .menu-lateral__links {
     display: flex;

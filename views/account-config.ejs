@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit-comércio</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://kit.fontawesome.com/dc7239166f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/account.css">
+</head>
+<body>
+    <%- include("components/header.ejs") %>
+    <div class="account-container">
+        <div class="account-container__menu-lateral">
+            <h1 class="account-container__menu-lateral__titulo">Sua conta</h1>
+            <ul class="account-container__menu-lateral__lista">
+                <li class="account-container__menu-lateral__lista__item"><a href="/sua-conta/principal">Principal</a></li>
+                <li class="account-container__menu-lateral__lista__item"><a href="/sua-conta/seguranca">Segurança</a></li>
+                <li class="account-container__menu-lateral__lista__item"><a href="/sua-conta/configuracao">Configurações</a></li>
+            </ul>
+        </div>
+        <div class="container__principal">
+           <div class="container__principal__header">
+            <div class="container__principal__header__perfil">
+                <img class="container__principal__header__perfil__imagem" src="https://static-00.iconduck.com/assets.00/profile-circle-icon-256x256-ei3prk7i.png"></img>
+                <p class="container__principal__header__perfil__nome">John Doe Da Silva Santos</p>
+            </div>
+            <ul class="container__principal__header__nav">
+                <li class="container__principal__header__nav__item">
+                    <p>ID de usuario:</p>
+                    <p><strong>0000000000</strong></p>
+                </li>
+                <li class="container__principal__header__nav__item">
+                    <p>Nível de acesso:</p>
+                    <p><strong>Usuário padrão</strong></p>
+                </li>
+            </ul>
+           </div>
+        </div>
+    </div>
+    <script src="/menuAnimation.js"></script>
+</body>
+</html>

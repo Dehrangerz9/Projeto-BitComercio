@@ -1,0 +1,76 @@
+.account-container {
+    display: grid;
+    grid-template-columns: 0.3fr 2fr;
+    column-gap: 15px;
+    margin-top: 1rem;
+    font-family: var(--main-font);
+}
+
+.account-container__menu-lateral {
+    height: 500px;
+    background-color: white;
+    
+    
+}
+.account-container__menu-lateral__titulo{
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 5px 0px 0px 15px;
+}
+.account-container__menu-lateral__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0px 0px 15px;
+}
+
+.account-container__menu-lateral__lista__item {
+    
+}
+
+.account-container__menu-lateral__lista__item:hover {
+    
+}
+
+.container__principal {
+    background-color: white;
+    
+}
+
+.container__principal__header {
+    display: flex;
+    margin-top: 1vh;
+    margin-left: 1vh;
+}
+
+.container__principal__header__perfil {
+    flex: 70%;
+    display: flex;
+    gap: 5px;
+   
+}
+
+.container__principal__header__perfil__imagem {
+    width: 150px;
+    height: auto;
+}
+
+.container__principal__header__perfil__nome{
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 1vh;
+}
+
+.container__principal__header__nav {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    padding-left: 5px;
+    gap: 5px;
+    border-left: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+.container__principal__header__nav__item {
+
+}

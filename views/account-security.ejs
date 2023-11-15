@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit-comércio</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://kit.fontawesome.com/dc7239166f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/account.css">
+</head>
+<body>
+    <%- include("components/header.ejs") %>
+    <div class="account-container">
+        <div class="account-container__menu-lateral">
+            <h1 class="account-container__menu-lateral__titulo">Sua conta</h1>
+            <ul class="account-container__menu-lateral__lista">
+                <li class="account-container__menu-lateral__lista__item"><a href="/sua-conta/principal">Principal</a></li>
+                <li class="account-container__menu-lateral__lista__item"><a href="/sua-conta/seguranca">Segurança</a></li>
+                <li class="account-container__menu-lateral__lista__item"><a href="/sua-conta/configuracao">Configurações</a></li>
+            </ul>
+        </div>
+        <div class="container__principal">
+<p>E-MAIL</p>
+<p>SENHA</p>
+           </div>
+        </div>
+    </div>
+    <script src="/menuAnimation.js"></script>
+</body>
+</html>

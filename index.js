@@ -39,11 +39,31 @@ app.post("/login", async (req,res)=>{
     }  
 })
 
-app.get("/sua-conta", async (req,res)=>{
-    res.send("sua conta")
+app.get("/sua-conta/principal", async (req,res)=>{
+    try {
+        res.render("account.ejs",{userInfo:defaultUser});
+    } catch(error){
+        console.log(error);
+    }
 })
 
-app.get("/conta-configuracoes", async (req,res)=>{
+app.get("/sua-conta/configuracao", async (req,res)=>{
+    try {
+        res.render("account-config.ejs",{userInfo:defaultUser});
+    } catch(error){
+        console.log(error);
+    }
+})
+
+app.get("/sua-conta/seguranca", async (req,res)=>{
+    try {
+        res.render("account-security.ejs",{userInfo:defaultUser});
+    } catch(error){
+        console.log(error);
+    }
+})
+
+app.get("/sua-conta/configuracoes", async (req,res)=>{
     res.send("configurações")
 })
 

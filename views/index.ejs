@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
     <script src="https://kit.fontawesome.com/dc7239166f.js" crossorigin="anonymous"></script>
-   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles/header.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
             </div>
             <div class="app-container__currencies__list">
                 <% if(cryptoData) {%>
-                <div class="currency__card">
+                <div class="currency__card" data-crypto-name="bitcoin" data-chart-color="orange">
                     <div class="currency__card__img"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png"></div>
                     <div class="currency__card__data">
                         <p><%-  parseFloat(cryptoData.data[0].priceUsd).toFixed(2) %> usd</p>
@@ -32,7 +32,7 @@
                 </div>
                 <%}%>
                 <% if(cryptoData) {%>
-                <div class="currency__card">
+                <div class="currency__card" data-crypto-name="ethereum" data-chart-color="blue">
                         <div class="currency__card__img"><img src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/512/Ethereum-ETH-icon.png"></div>
                         <div class="currency__card__data">
                             <p><%- parseFloat(cryptoData.data[1].priceUsd).toFixed(2) %> usd</p>
@@ -45,7 +45,7 @@
                 </div>
                 <%}%>
                 <% if(cryptoData) {%>
-                    <div class="currency__card">
+                    <div class="currency__card" data-crypto-name="monero" data-chart-color="#F39C12">
                             <div class="currency__card__img"><img src="https://cdn-icons-png.flaticon.com/512/825/825487.png"></div>
                             <div class="currency__card__data">
                                 <p><%- parseFloat(cryptoData.data[22].priceUsd).toFixed(2) %> usd</p>
@@ -68,9 +68,11 @@
                 <li class="app-container__menu__list__item"><i class="fa-solid fa-gear fa-xl"></i></li>
             </ul>
         </div>
-        <div class="app-container__currency-performance">
+        <div class="app-container__currency-performance" >
             <p class="card-title">Performance</p>
-            <div class="app-container__currency-performance__graph"></div>
+            <div class="app-container__currency-performance__graph" >
+                <canvas id="myChart"></canvas>
+            </div>
         </div>
         <div class="app-container__currency-analysis">
             <p class="card-title">Analise</p>
@@ -83,9 +85,7 @@
         </div>
     </div>
 
-    <script src="indexChart.js"></script>
+    <script src="/chart.js"></script>
+    <script src="/menuAnimation.js"></script>
 </body>
-
-
-
 </html>

@@ -5,10 +5,10 @@
     </div>
     <div class="header__menu">
         <ul class="header__menu__list">
-            <li class="header__menu__list__item">Home</li>
-            <li class="header__menu__list__item">Carteira</li>
-            <li class="header__menu__list__item">Network</li>
-            <li class="header__menu__list__item">Ranking</li>
+            <li class="header__menu__list__item"><a href="/index">Home</a></li>
+            <li class="header__menu__list__item"><a href="#">Carteira</a></li>
+            <li cl#ass="header__menu__list__item"><a href="#">Network</a></li>
+            <li class="header__menu__list__item"><a href="#">Ranking</a></li>
         </ul>
     </div>
     <div class="header__profile" id="profile">
@@ -20,13 +20,14 @@
                 <p><%- userInfo.name %></p>
             </div>
             <div class="menu-lateral__header__side">
+                <p>R$</p>
                 <input type="password" id="accountBalance" readonly value="<%- userInfo.balance %>"></input>
                 <i class="fa-solid fa-eye" id="toggleAccountBalance"></i>
             </div>
         </div>
         <ul class="menu-lateral__links">
-            <li><a href="/sua-conta">Sua conta</a></li>
-            <li><a href="/conta-configuracoes">Configurações</a></li>
+            <li><a href="/sua-conta/principal">Sua conta</a></li>
+            <li><a href="/sua-conta/configuracao">Configurações</a></li>
             <li><a href="/suporte">Suporte</a></li>
             <li><a href="/">Log-off</a></li>
         </ul>
