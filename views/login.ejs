@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bit-comércio</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://kit.fontawesome.com/dc7239166f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/login.css">
 </head>
 <body>
-    <form action="/login" method="POST">
-        <label for="fname">Nome:</label><br>
-        <input type="text" id="name" name="name" value="John"><br>
-        <label for="lname">Senha:</label><br>
-        <input type="text" id="password" name="password" value="123"><br><br>
-        <input type="submit" value="Login">
-      </form> 
+    <div class="login-menu">
+        <h1 class="login-menu__titulo">Bit-comércio</h1>
+        <div class="login-menu__form-container">
+        <form action="/login" method="POST" class="login-menu__form-container__form">
+            <label for="fname">Nome</label>
+            <input type="text" id="name" name="name" value="John">
+            <label for="lname">Senha</label>
+            <input type="password" id="password" name="password" value="123">
+            <input type="submit" value="Login" class="form-login">
+          </form> 
+          <div class="login-menu__opcoes">
+            <a href="#">Esqueceu sua senha?</a>
+            <a href="#">Registrar-se</a>
+          </div>
+        </div>
+    </div>
+    
 </body>
 </html>

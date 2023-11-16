@@ -1,0 +1,95 @@
+body {
+    background-image: var(--main-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    height: auto;
+}
+
+.login-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+
+.login-menu__titulo {
+    font-family: var(--main-font);
+    font-weight: 900;
+    font-size: xx-large;
+
+    text-align: center;
+}
+
+.login-menu__form-container {
+    background-color: white;
+    border-radius: 25px;
+    padding: 1rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 1rem;
+}
+
+.login-menu__form-container__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-menu__form-container__form label {
+    font-family: var(--main-font);
+    font-weight: lighter;
+}
+
+
+
+.login-menu__form-container__form input{
+    height: 5vh;
+    width: 15vw;
+    font-family: var(--main-font);
+    border: 0px;
+    background-color: var(--darker-main-color);
+
+}
+
+.login-menu__form-container__form input:focus {
+    outline: none;
+}
+
+.form-login:hover {
+    color: white;
+    background-color: orange;
+    animation: fadeIn 0.5s;
+
+    cursor: pointer;
+}
+
+.login-menu__opcoes {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+    padding-top: 1rem;
+    gap: 5px;
+
+    
+}
+
+.login-menu__opcoes a {
+    text-decoration: none;
+    color: black;
+   
+}
+
+.login-menu__opcoes a:hover{
+    color:orange;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% {opacity: 1;}
+}
