@@ -48,7 +48,7 @@ body {
 
 
 
-.login-menu__form-container__form input{
+.input {
     height: 5vh;
     width: 15vw;
     font-family: var(--main-font);
@@ -57,7 +57,7 @@ body {
 
 }
 
-.login-menu__form-container__form input:focus {
+.input:focus {
     outline: none;
 }
 
@@ -73,6 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font);
+    font-size: small;
     padding-top: 1rem;
     gap: 5px;
 

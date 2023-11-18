@@ -21,6 +21,10 @@ app.get("/", async (req,res)=>{
     res.render("login.ejs");
 })
 
+app.get("/registrar", async (req,res)=>{
+    res.render("register.ejs");
+})
+
 app.get("/index", async (req,res)=>{
     try {
         const cryptoData = await axios.get('https://api.coincap.io/v2/assets');
