@@ -1,0 +1,63 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.form-line {
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+
+    gap: 5px;
+}
+
+.form-line > p {
+    font-size: smaller;
+}
+
+.form-label {
+    color: black;
+}
+
+.form-input, .form-submit {
+    height: 5vh;
+    width: 17vw;
+    font-family: var(--main-font);
+    border: 0px;
+    background-color: var(--darker-main-color);
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-submit:hover {
+    color: white;
+    background-color: orange;
+    animation: fadeIn 0.5s;
+
+    cursor: pointer;
+}
+
+.correct {
+    color: darkblue;
+    border: 1px solid darkblue;
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+}
+
+p.error, .form-label  {
+    border: 0px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% {opacity: 1;}
+}

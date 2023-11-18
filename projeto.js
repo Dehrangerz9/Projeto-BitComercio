@@ -35,6 +35,7 @@ uma conta possui:
     -diferentes tipos de moedas com seu valores.
 -tipo de usuario [Admin ou não]
 -um ID
+-l
 
 imagens
 

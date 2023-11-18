@@ -25,6 +25,10 @@ app.get("/registrar", async (req,res)=>{
     res.render("register.ejs");
 })
 
+app.post("/registrar", async (req,res)=>{
+    res.redirect("/");
+})
+
 app.get("/index", async (req,res)=>{
     try {
         const cryptoData = await axios.get('https://api.coincap.io/v2/assets');
@@ -34,6 +38,8 @@ app.get("/index", async (req,res)=>{
     }
     
 })
+
+
 
 app.post("/login", async (req,res)=>{
     if (req.body.name === defaultUser.login && req.body.password === defaultUser.password){

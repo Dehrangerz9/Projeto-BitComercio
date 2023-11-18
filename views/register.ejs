@@ -7,30 +7,39 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/register.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/form.css">
     <title>Bitcomércio</title>
 </head>
 <body>
     <div class="register-container">
         <h1>REGISTRAR-SE</h1>
-        <form class="register-container__form">
-           
-                <div class="register-container__form__line">
-                    <label for="username">Nome</label>
-                    <input type="text" name="username" id="username" class="input">
-                </div>
-            <div class="register-container__form__line">
-                <label for="nickname">Senha</label>
-                <input type="text" name="nickname" id="nickname" class="input">
+        <form class="form" action="/registrar" method="POST">
+            <div class="form-line">
+                <label for="username" class="form-label">Nome</label>
+                <input type="text" name="username" id="username" class="form-input">
+                <p class="error-message"></p>
+            </div>
+            <div class="form-line">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="username" id="email" class="form-input">
+                <p class="error-message"></p>
+            </div>
+            <div class="form-line">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" name="password" id="password" class="form-input">
+                <p class="error-message"></p>
+            </div>
+            <div class="form-line">
+                <label for="password2" class="form-label">Confirme sua senha</label>
+                <input type="password" name="password2" id="password2" class="form-input">
+                <p class="error-message"></p>
             </div>
             <div class="register-container__form__line">
-                <label for="password">Confirme sua senha</label>
-                <input type="text" name="password" id="password" class="input">
-            </div>
-            <div class="register-container__form__line">
-                <input type="submit" value="Cadastrar-se" class="input form-login">
+                <input type="submit" value="Cadastrar-se" class="form-input form-submit">
             </div>
         </form>
         <p>Já possui uma conta? <a href="/">Login</a></p>
     </div>
+    <script src="/register.js"></script>
 </body>
 </html>
