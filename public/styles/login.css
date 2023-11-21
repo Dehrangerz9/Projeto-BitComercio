@@ -5,6 +5,8 @@ body {
     background-attachment: fixed;
 
     height: auto;
+
+    font-family: var(--main-font);
 }
 
 .login-menu {
@@ -94,3 +96,4 @@ body {
     0% { opacity: 0;}
     100% {opacity: 1;}
 }
+

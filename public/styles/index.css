@@ -156,3 +156,64 @@ a {
     grid-area: projections;
 
 }
+
+@media only screen and (max-width:1000px){
+    body {
+        width: 100%;
+    }
+
+    .app-container {
+        display: grid;
+        width: 100%;
+        height: auto;
+
+        grid-template-columns: 0.1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: 
+        "currencies"
+        "menu"
+        "currency-performance" 
+        "currency-analysis"
+        "portfolio"
+        "projections";
+        
+        row-gap: 1vh;
+        column-gap: 1vw;
+    }
+
+    .app-container__menu__list {
+        flex: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .currency__card {
+        background-color: white;
+        border-radius: 15px;
+        width: 200px;
+        height: 50px;
+        display: flex;
+        transition: 0.5s;
+
+        font-size: smaller;
+    }
+
+
+    .currency__card__img {
+        flex: 40%;
+        width: 80%;
+        height: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .currency__card__img > img {
+        width: 45px;
+        height: auto;
+    }
+    
+}

@@ -61,3 +61,21 @@ p.error, .form-label  {
     0% { opacity: 0;}
     100% {opacity: 1;}
 }
+
+@media only screen and (max-width: 800px){
+    body {
+        margin: 0px;
+    }
+
+    .login-menu {
+        width: 90%;
+    }
+
+    .form-line {
+        width: 100%;
+    }
+
+    .form-input , .form-submit{
+        width: 100%;
+    }
+}
